@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "917f1790-0996-4348-8451-90f464c57303",
+		"name": "Unow test",
+		"description": "Test from unow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Appointments from a doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/appointment/list?doctor_id=1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointment",
+						"list"
+					],
+					"query": [
+						{
+							"key": "doctor_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept or decline doctor appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "appointment_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "decision",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/appointment/accept",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointment",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "doctor_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "patient_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "06/13/2022 07:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/appointment/create",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
